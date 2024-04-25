@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://3kyrdjq1ajja"]
+[gd_scene load_steps=4 format=3 uid="uid://3kyrdjq1ajja"]
 
 [ext_resource type="Texture2D" uid="uid://dwmesa4ir4oy1" path="res://assets/Gfx/objects/bed.png" id="1_75yr7"]
 [ext_resource type="Texture2D" uid="uid://c7cgk46cauhdf" path="res://assets/Gfx/objects/pillow_large.png" id="2_jrbcm"]
 [ext_resource type="Texture2D" uid="uid://cjiv6vhlyltf4" path="res://assets/Gfx/objects/pillow_small.png" id="3_kki71"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ewi"]
-size = Vector2(633, 370)
 
 [node name="bed" type="StaticBody2D"]
 
@@ -21,6 +18,5 @@ texture = ExtResource("2_jrbcm")
 position = Vector2(399, 260)
 texture = ExtResource("3_kki71")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(401.5, 254)
-shape = SubResource("RectangleShape2D_e3ewi")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(85, 72, 85, 436, 718, 439, 719, 72)
