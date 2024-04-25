@@ -9,9 +9,9 @@ func _on_gate_player_entered_gate(body) -> void:
 	print(body)
 
 
-func _on_player_laser_fired() -> void:
+func _on_player_laser_fired(emitter_position) -> void:
 	var laser = laser_scene.instantiate()
-	laser.position = $player.position
+	laser.position = emitter_position
 	add_child(laser)
 
 
