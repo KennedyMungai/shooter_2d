@@ -9,5 +9,5 @@ func _ready() -> void:
 		print(i)
 
 
-#func _process(delta: float) -> void:
-	#print('I have a big grown male chicken')
+func _process(delta: float) -> void:
+	print('I have a big grown male chicken')
