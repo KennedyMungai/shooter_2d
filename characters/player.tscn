@@ -7,13 +7,11 @@
 radius = 69.0
 height = 204.0
 
-[node name="player" type="Node2D"]
+[node name="player" type="CharacterBody2D"]
 script = ExtResource("2_3ng0y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_v673h")
 
 [node name="playerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_mx0x0")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="playerSprite"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="playerSprite/CharacterBody2D"]
-shape = SubResource("CapsuleShape2D_v673h")
