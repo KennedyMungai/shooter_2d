@@ -26,13 +26,13 @@ autostart = true
 
 [node name="laser_start_positions" type="Node2D" parent="."]
 
-[node name="Marker2D" type="Marker2D" parent="laser_start_positions"]
+[node name="laser_markers" type="Marker2D" parent="laser_start_positions"]
 position = Vector2(12, -92)
 
-[node name="Marker2D2" type="Marker2D" parent="laser_start_positions"]
+[node name="laser_marker_2" type="Marker2D" parent="laser_start_positions"]
 position = Vector2(18, -96)
 
-[node name="Marker2D3" type="Marker2D" parent="laser_start_positions"]
+[node name="laser_marker_3" type="Marker2D" parent="laser_start_positions"]
 position = Vector2(24, -92)
 
 [connection signal="timeout" from="shooting_timer" to="." method="_on_shooting_timer_timeout"]
