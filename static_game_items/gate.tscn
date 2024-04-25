@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dm1xme4e2birp" path="res://assets/Gfx/objects/gate.png" id="1_rqk6q"]
 
-[node name="gate" type="Area2D"]
+[node name="gate" type="StaticBody2D"]
 
 [node name="Gate" type="Sprite2D" parent="."]
 texture = ExtResource("1_rqk6q")
