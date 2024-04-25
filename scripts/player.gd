@@ -6,6 +6,9 @@ var can_laser: bool = true
 var can_grenade: bool = true
 
 
+signal laser_fired
+
+
 func _process(_delta: float) -> void:
 	var direction = Input.get_vector('left', 'right', 'up','down')
 	velocity = direction * PLAYER_SPEED
@@ -16,6 +19,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if(event.is_action_pressed('primary action')) and can_laser:
 		print('Shooting a laser')
 		can_laser = false
+		laser_fired.emit()
 	elif(event.is_action_pressed('secondary action')) and can_grenade:
 		print('Shoot grenade')
 		can_grenade = false
