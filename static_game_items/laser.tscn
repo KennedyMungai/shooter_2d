@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://x04c5qmc1gew"]
+
+[ext_resource type="Texture2D" uid="uid://daw674vujidp4" path="res://assets/Gfx/projectiles/blue.png" id="1_53lu0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfxh1"]
+size = Vector2(32, 169)
+
+[node name="laser" type="Area2D"]
+
+[node name="Blue" type="Sprite2D" parent="."]
+texture = ExtResource("1_53lu0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8.5)
+shape = SubResource("RectangleShape2D_tfxh1")
