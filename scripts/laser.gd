@@ -1,6 +1,6 @@
 extends Area2D
 
-const LASER_SPEED: int = 1500
+const LASER_SPEED: int = 2000
 
 var speed: int = 1000
 var direction: Vector2 = Vector2.UP
