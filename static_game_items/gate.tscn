@@ -15,4 +15,4 @@ texture = ExtResource("1_rqk6q")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(-369, 597, -364, 346, 493, 349, 488, 594)
+polygon = PackedVector2Array(-359, 711, -364, 346, 493, 349, 492, 700)
