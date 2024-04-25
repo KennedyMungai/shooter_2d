@@ -24,16 +24,16 @@ autostart = true
 wait_time = 2.0
 autostart = true
 
-[node name="shooting_markers" type="Node2D" parent="."]
+[node name="laser_start_positions" type="Node2D" parent="."]
 
-[node name="Marker2D" type="Marker2D" parent="shooting_markers"]
-position = Vector2(12, -96)
+[node name="Marker2D" type="Marker2D" parent="laser_start_positions"]
+position = Vector2(12, -92)
 
-[node name="Marker2D2" type="Marker2D" parent="shooting_markers"]
+[node name="Marker2D2" type="Marker2D" parent="laser_start_positions"]
 position = Vector2(18, -96)
 
-[node name="Marker2D3" type="Marker2D" parent="shooting_markers"]
-position = Vector2(24, -96)
+[node name="Marker2D3" type="Marker2D" parent="laser_start_positions"]
+position = Vector2(24, -92)
 
 [connection signal="timeout" from="shooting_timer" to="." method="_on_shooting_timer_timeout"]
 [connection signal="timeout" from="grenade_timer" to="." method="_on_grenade_timer_timeout"]
