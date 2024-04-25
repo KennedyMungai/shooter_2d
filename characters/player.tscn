@@ -16,8 +16,13 @@ shape = SubResource("CapsuleShape2D_v673h")
 [node name="playerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_mx0x0")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="shooting_timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="grenade_timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="shooting_timer" to="." method="_on_shooting_timer_timeout"]
+[connection signal="timeout" from="grenade_timer" to="." method="_on_grenade_timer_timeout"]
