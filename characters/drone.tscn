@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkxt1wc4rdkp0"]
+[gd_scene load_steps=3 format=3 uid="uid://bkxt1wc4rdkp0"]
 
 [ext_resource type="Texture2D" uid="uid://5wglxb4tfdda" path="res://assets/Gfx/enemies/drone.png" id="1_4jx8t"]
+[ext_resource type="Script" path="res://scripts/drone.gd" id="1_t2swy"]
 
 [node name="drone" type="CharacterBody2D"]
+script = ExtResource("1_t2swy")
 
 [node name="Drone" type="Sprite2D" parent="."]
 texture = ExtResource("1_4jx8t")
