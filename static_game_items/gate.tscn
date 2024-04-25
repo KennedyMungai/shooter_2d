@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqelt3qrgeae2"]
+[gd_scene load_steps=3 format=3 uid="uid://bqelt3qrgeae2"]
 
+[ext_resource type="Script" path="res://scripts/gate.gd" id="1_drt0k"]
 [ext_resource type="Texture2D" uid="uid://dm1xme4e2birp" path="res://assets/Gfx/objects/gate.png" id="1_rqk6q"]
 
 [node name="gate" type="Node2D"]
+script = ExtResource("1_drt0k")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
