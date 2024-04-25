@@ -11,5 +11,4 @@ func _process(delta: float) -> void:
 
 
 func _on_laser_lifespan_timeout() -> void:
-	print('To be deleted')
 	queue_free()
