@@ -12,3 +12,5 @@ script = ExtResource("1_jjaet")
 [node name="player" parent="." instance=ExtResource("1_dynca")]
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+
+[connection signal="player_entered_gate" from="gate" to="." method="_on_gate_player_entered_gate"]
