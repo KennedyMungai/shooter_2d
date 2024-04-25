@@ -11,7 +11,8 @@ func _on_gate_player_entered_gate(body) -> void:
 
 func _on_player_laser_fired() -> void:
 	var laser = laser_scene.instantiate()
-	$player.add_child(laser)
+	laser.position = $player.position
+	add_child(laser)
 
 
 func _on_player_grenade_thrown() -> void:
