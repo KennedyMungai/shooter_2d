@@ -7,6 +7,7 @@ var can_grenade: bool = true
 
 
 signal laser_fired
+signal grenade_thrown
 
 
 func _process(_delta: float) -> void:
@@ -20,8 +21,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		can_laser = false
 		laser_fired.emit()
 	elif(event.is_action_pressed('secondary action')) and can_grenade:
-		print('Shoot grenade')
 		can_grenade = false
+		grenade_thrown.emit()
 
 
 func _on_shooting_timer_timeout() -> void:
