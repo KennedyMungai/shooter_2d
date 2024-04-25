@@ -20,4 +20,4 @@ position = Vector2(15, 186)
 [node name="player" parent="." instance=ExtResource("1_dynca")]
 
 [node name="drone" parent="." instance=ExtResource("5_at1f2")]
-position = Vector2(273, -138)
+position = Vector2(-1032, -33)
