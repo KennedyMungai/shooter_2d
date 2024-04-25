@@ -7,9 +7,9 @@
 [node name="level" type="Node2D"]
 script = ExtResource("1_jjaet")
 
-[node name="player" parent="." instance=ExtResource("1_dynca")]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="bed" parent="." instance=ExtResource("3_xcm3f")]
 position = Vector2(-273, -276)
+
+[node name="player" parent="." instance=ExtResource("1_dynca")]
