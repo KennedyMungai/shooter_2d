@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-const PLAYER_SPEED: float = 500
+const PLAYER_SPEED: float = 20000
 
 func _process(delta: float) -> void:
 	var direction = Input.get_vector('left', 'right', 'up','down')
-	position += direction * PLAYER_SPEED * delta
-
+	velocity = direction * PLAYER_SPEED * delta
+	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if(event.is_action_pressed('primary action')):
