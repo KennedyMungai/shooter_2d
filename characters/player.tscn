@@ -6,5 +6,5 @@
 [node name="player" type="Node2D"]
 script = ExtResource("2_3ng0y")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="playerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_mx0x0")
