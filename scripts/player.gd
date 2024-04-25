@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 const PLAYER_SPEED: float = 500
 
