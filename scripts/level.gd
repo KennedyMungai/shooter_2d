@@ -1,6 +1,7 @@
 extends Node2D
 
 var test_array: Array[String] = ['Something', 'in', 'the', 'way']
+var arbitrary_speed: float = 20.5
 
 func _ready() -> void:
 	print('The level is ready')
@@ -10,4 +11,5 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	print('I have a big grown male chicken')
+	print(arbitrary_speed * delta)
+
