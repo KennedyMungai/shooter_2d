@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcp1tsus2piwk"]
+[gd_scene load_steps=5 format=3 uid="uid://bcp1tsus2piwk"]
 
 [ext_resource type="PackedScene" uid="uid://dubkhpbjbtxbo" path="res://characters/player.tscn" id="1_dynca"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_jjaet"]
-[ext_resource type="PackedScene" uid="uid://3kyrdjq1ajja" path="res://bed.tscn" id="3_xcm3f"]
+[ext_resource type="PackedScene" uid="uid://3kyrdjq1ajja" path="res://static_game_items/bed.tscn" id="3_xcm3f"]
+[ext_resource type="PackedScene" uid="uid://8vkm4lqdmno2" path="res://static_game_items/billboard.tscn" id="4_sh37q"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_jjaet")
@@ -11,5 +12,8 @@ script = ExtResource("1_jjaet")
 
 [node name="bed" parent="." instance=ExtResource("3_xcm3f")]
 position = Vector2(-282, -324)
+
+[node name="billboard" parent="." instance=ExtResource("4_sh37q")]
+position = Vector2(15, 186)
 
 [node name="player" parent="." instance=ExtResource("1_dynca")]
