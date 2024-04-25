@@ -17,7 +17,6 @@ func _process(_delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if(event.is_action_pressed('primary action')) and can_laser:
-		print('Shooting a laser')
 		can_laser = false
 		laser_fired.emit()
 	elif(event.is_action_pressed('secondary action')) and can_grenade:
