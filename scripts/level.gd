@@ -1,5 +1,6 @@
 extends Node2D
 
+var laser_scene: PackedScene = preload("res://static_game_items/laser.tscn")
 
 func _on_gate_player_entered_gate(body) -> void:
 	print('Player has entered gate external')
@@ -7,8 +8,8 @@ func _on_gate_player_entered_gate(body) -> void:
 
 
 func _on_player_laser_fired() -> void:
-	print("Laser has been fired external")
-
+	var laser = laser_scene.instantiate()
+	add_child(laser)
 
 func _on_player_grenade_thrown() -> void:
 	print("Grenade thrown")
