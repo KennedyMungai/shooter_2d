@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bcp1tsus2piwk"]
+[gd_scene load_steps=16 format=3 uid="uid://bcp1tsus2piwk"]
 
 [ext_resource type="PackedScene" uid="uid://dubkhpbjbtxbo" path="res://characters/player.tscn" id="1_dynca"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_jjaet"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c6bbkty072bqo" path="res://assets/Gfx/decals/moss/moss_4.png" id="7_r0dvp"]
 [ext_resource type="Texture2D" uid="uid://c7m4hqomv2swv" path="res://assets/Gfx/decals/moss/moss_5.png" id="8_vgwna"]
 [ext_resource type="Texture2D" uid="uid://c1vrbab7hgtqv" path="res://assets/Gfx/tilesets/outside_walls.png" id="9_pvvbf"]
+[ext_resource type="Texture2D" uid="uid://kjuis4b58o0a" path="res://assets/Gfx/tilesets/soil.png" id="10_wwqnq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38bcw"]
 resource_name = "Walls"
@@ -1805,9 +1806,23 @@ texture_region_size = Vector2i(390, 390)
 0:2/0 = 0
 0:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqmq2"]
+texture = ExtResource("10_wwqnq")
+texture_region_size = Vector2i(390, 390)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_3jjuw"]
 tile_size = Vector2i(390, 390)
 sources/0 = SubResource("TileSetAtlasSource_38bcw")
+sources/1 = SubResource("TileSetAtlasSource_pqmq2")
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_jjaet")
