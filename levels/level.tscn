@@ -1,11 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcp1tsus2piwk"]
+[gd_scene load_steps=6 format=3 uid="uid://bcp1tsus2piwk"]
 
 [ext_resource type="PackedScene" uid="uid://dubkhpbjbtxbo" path="res://characters/player.tscn" id="1_dynca"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_jjaet"]
+[ext_resource type="Texture2D" uid="uid://cqr00sqitwr7j" path="res://assets/Gfx/ground/stones.png" id="2_e3iq8"]
 [ext_resource type="PackedScene" uid="uid://bqelt3qrgeae2" path="res://static_game_items/gate.tscn" id="3_2p7bg"]
+[ext_resource type="Texture2D" uid="uid://b4llo0grbcsw1" path="res://assets/Gfx/decals/dirt_patch.png" id="3_jeau5"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_jjaet")
+
+[node name="ground" type="Node2D" parent="."]
+
+[node name="soil" type="Sprite2D" parent="ground"]
+texture_repeat = 2
+position = Vector2(-612, -627)
+texture = ExtResource("2_e3iq8")
+region_enabled = true
+region_rect = Rect2(-2551.92, -1143.05, 3862.06, 2027.87)
+
+[node name="decoration" type="Sprite2D" parent="ground"]
+position = Vector2(-1584, -232)
+texture = ExtResource("3_jeau5")
 
 [node name="gate" parent="." instance=ExtResource("3_2p7bg")]
 position = Vector2(0, -888)
@@ -15,8 +30,8 @@ position = Vector2(0, -888)
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, 300)
 zoom = Vector2(0.6, 0.6)
-limit_left = -1000
-limit_top = -1000
+limit_left = -10000
+limit_top = -10000
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
