@@ -19,6 +19,7 @@ region_enabled = true
 region_rect = Rect2(-2551.92, -1143.05, 3862.06, 2027.87)
 
 [node name="decoration" type="Sprite2D" parent="ground"]
+modulate = Color(0.905882, 0.654902, 0.290196, 1)
 position = Vector2(-1584, -232)
 texture = ExtResource("3_jeau5")
 
