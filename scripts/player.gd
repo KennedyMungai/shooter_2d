@@ -14,6 +14,8 @@ func _process(_delta: float) -> void:
 	var direction = Input.get_vector('left', 'right', 'up','down')
 	velocity = direction * PLAYER_SPEED
 	move_and_slide()
+	
+	look_at(get_global_mouse_position())
 
 
 func _unhandled_input(event: InputEvent) -> void:
