@@ -38,7 +38,7 @@ position = Vector2(24, -92)
 [node name="grenade_starter_position" type="Node2D" parent="."]
 
 [node name="grenade_starter_marker" type="Marker2D" parent="grenade_starter_position"]
-position = Vector2(19, -113)
+position = Vector2(18, -116)
 
 [connection signal="timeout" from="shooting_timer" to="." method="_on_shooting_timer_timeout"]
 [connection signal="timeout" from="grenade_timer" to="." method="_on_grenade_timer_timeout"]
