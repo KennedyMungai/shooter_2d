@@ -7,7 +7,7 @@ var can_grenade: bool = true
 
 
 signal laser_fired(emitter_position: Vector2)
-signal grenade_thrown(emitter_position: Vector2)
+signal grenade_thrown(emitter_position: Vector2, direction: Vector2)
 
 
 func _process(_delta: float) -> void:
@@ -26,7 +26,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		laser_fired.emit(selected_laser.global_position)
 	elif(event.is_action_pressed('secondary action')) and can_grenade:
 		can_grenade = false
-		grenade_thrown.emit($grenade_starter_position/grenade_starter_marker.global_position)
+		grenade_thrown.emit($grenade_starter_position/grenade_starter_marker.global_position, (get_global_mouse_position() - position).normalized())
 
 
 func _on_shooting_timer_timeout() -> void:
