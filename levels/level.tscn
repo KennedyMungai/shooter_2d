@@ -1874,7 +1874,7 @@ texture = ExtResource("8_vgwna")
 position = Vector2(-590, -957)
 texture = ExtResource("7_r0dvp")
 
-[node name="house" parent="." instance=ExtResource("11_tkuy0")]
+[node name="house" parent="ground" instance=ExtResource("11_tkuy0")]
 position = Vector2(-3624, 3202)
 
 [node name="gate" parent="." instance=ExtResource("3_2p7bg")]
