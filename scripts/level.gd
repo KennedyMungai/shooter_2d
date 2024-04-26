@@ -19,5 +19,5 @@ func _on_player_laser_fired(emitter_position) -> void:
 func _on_player_grenade_thrown(emitter_position, direction_thrown) -> void:
 	var grenade: RigidBody2D = grenade_scene.instantiate()
 	grenade.position = emitter_position
-	grenade.linear_velocity = Vector2.UP * 100
+	grenade.linear_velocity = direction_thrown * 100
 	$projectiles.add_child(grenade)
