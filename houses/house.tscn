@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bli5i0vmaat1d" path="res://assets/Gfx/tilesets/interior.png" id="1_xvylc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82ck2"]
-resource_name = "house"
+resource_name = "interior"
 texture = ExtResource("1_xvylc")
 texture_region_size = Vector2i(390, 390)
 93:7/0 = 0
@@ -8363,6 +8363,7 @@ texture_region_size = Vector2i(390, 390)
 6:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ybou5"]
+tile_size = Vector2i(390, 390)
 sources/0 = SubResource("TileSetAtlasSource_82ck2")
 
 [node name="house" type="Area2D"]
