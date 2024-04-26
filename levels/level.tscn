@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c1vrbab7hgtqv" path="res://assets/Gfx/tilesets/outside_walls.png" id="9_pvvbf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38bcw"]
+resource_name = "Walls"
 texture = ExtResource("9_pvvbf")
 texture_region_size = Vector2i(390, 390)
 8:8/0 = 0
