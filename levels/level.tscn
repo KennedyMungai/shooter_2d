@@ -13,6 +13,7 @@ position = Vector2(0, -888)
 [node name="player" parent="." instance=ExtResource("1_dynca")]
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+offset = Vector2(0, 300)
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
