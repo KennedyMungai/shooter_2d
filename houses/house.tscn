@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dw8enivas3s6p"]
 
-[ext_resource type="Texture2D" uid="uid://bli5i0vmaat1d" path="res://assets/Gfx/tilesets/interior.png" id="1_l3a0p"]
+[ext_resource type="Texture2D" uid="uid://bli5i0vmaat1d" path="res://assets/Gfx/tilesets/interior.png" id="1_xvylc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82ck2"]
 resource_name = "house"
-texture = ExtResource("1_l3a0p")
+texture = ExtResource("1_xvylc")
 texture_region_size = Vector2i(390, 390)
 93:7/0 = 0
 94:7/0 = 0
