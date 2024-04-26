@@ -7,6 +7,7 @@
 size = Vector2(32, 169)
 
 [node name="laser" type="Area2D"]
+position = Vector2(0, -69)
 script = ExtResource("1_rf2n0")
 
 [node name="Blue" type="Sprite2D" parent="."]
