@@ -1832,10 +1832,9 @@ script = ExtResource("1_jjaet")
 
 [node name="soil" type="Sprite2D" parent="ground"]
 texture_repeat = 2
-position = Vector2(-612, -627)
 texture = ExtResource("2_e3iq8")
 region_enabled = true
-region_rect = Rect2(-2551.92, -1143.05, 21179.8, 10147.1)
+region_rect = Rect2(-2500, -1143.05, 22000, 7500)
 
 [node name="TileMap" type="TileMap" parent="ground"]
 tile_set = SubResource("TileSet_3jjuw")
