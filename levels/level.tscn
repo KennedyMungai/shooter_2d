@@ -1834,7 +1834,7 @@ script = ExtResource("1_jjaet")
 texture_repeat = 2
 texture = ExtResource("2_e3iq8")
 region_enabled = true
-region_rect = Rect2(-2500, -1143.05, 16000, 7500)
+region_rect = Rect2(-2500, -1143.05, 16000, 10000)
 
 [node name="TileMap" type="TileMap" parent="ground"]
 tile_set = SubResource("TileSet_3jjuw")
