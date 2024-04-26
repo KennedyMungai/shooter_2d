@@ -1807,6 +1807,7 @@ texture_region_size = Vector2i(390, 390)
 0:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqmq2"]
+resource_name = "Soil"
 texture = ExtResource("10_wwqnq")
 texture_region_size = Vector2i(390, 390)
 0:0/0 = 0
