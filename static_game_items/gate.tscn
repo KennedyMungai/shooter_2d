@@ -15,6 +15,7 @@ polygon = PackedVector2Array(-1437, -782, -1431, 542, -1420, 629, -1366, 695, -1
 texture = ExtResource("1_rqk6q")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-359, 711, -364, 346, 493, 349, 492, 700)
