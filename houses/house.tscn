@@ -8367,6 +8367,7 @@ tile_size = Vector2i(390, 390)
 sources/0 = SubResource("TileSetAtlasSource_82ck2")
 
 [node name="house" type="Area2D"]
+collision_layer = 16
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-2605, -1233, -2611, 1205, -2526, 1381, -2385, 1432, 2440, 1426, 2550, 1356, 2593, 1273, 2610, -1275, 2531, -1366, 2390, -1436, -2390, -1431, -2538, -1357)
