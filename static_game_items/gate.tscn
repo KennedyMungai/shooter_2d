@@ -7,6 +7,8 @@
 script = ExtResource("1_drt0k")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 11
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-1437, -782, -1431, 542, -1420, 629, -1366, 695, -1301, 740, -1219, 771, -370, 774, -370, 338, 501, 338, 495, 774, 1287, 777, 1395, 760, 1465, 717, 1525, 658, 1556, 564, 1559, -779)
@@ -15,7 +17,7 @@ polygon = PackedVector2Array(-1437, -782, -1431, 542, -1420, 629, -1366, 695, -1
 texture = ExtResource("1_rqk6q")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 4
+collision_layer = 16
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-359, 711, -364, 346, 493, 349, 492, 700)
