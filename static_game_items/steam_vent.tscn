@@ -12,7 +12,7 @@ emission_shape = 1
 emission_sphere_radius = 30.0
 gravity = Vector3(60, -60, 0)
 scale_min = 0.5
-scale_max = 1.5
+scale_max = 2.5
 turbulence_enabled = true
 
 [node name="steam_vent" type="StaticBody2D"]
