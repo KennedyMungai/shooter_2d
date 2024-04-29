@@ -1,11 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://dubkhpbjbtxbo"]
+[gd_scene load_steps=8 format=3 uid="uid://dubkhpbjbtxbo"]
 
 [ext_resource type="Texture2D" uid="uid://cggmmlrha26nj" path="res://assets/Gfx/player/player.png" id="1_mx0x0"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_3ng0y"]
+[ext_resource type="Texture2D" uid="uid://ciy72cb5frwap" path="res://assets/Gfx/decals/white.png" id="3_7crau"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v673h"]
 radius = 69.0
 height = 204.0
+
+[sub_resource type="Gradient" id="Gradient_vjsn3"]
+colors = PackedColorArray(1, 0, 0, 1, 0.829091, 0.687644, 0.0572252, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8bval"]
+gradient = SubResource("Gradient_vjsn3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_so63c"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+angle_min = -90.0
+angle_max = 90.0
+gravity = Vector3(200, 0, 0)
+scale_min = 0.1
+scale_max = 0.35
+color_ramp = SubResource("GradientTexture1D_8bval")
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("2_3ng0y")
@@ -45,6 +66,15 @@ rotation = 1.5708
 [node name="grenade_starter_marker" type="Marker2D" parent="grenade_starter_position"]
 position = Vector2(106, 17)
 rotation = 1.5708
+
+[node name="flash_emitter" type="GPUParticles2D" parent="."]
+position = Vector2(97, 17)
+emitting = false
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_so63c")
+texture = ExtResource("3_7crau")
+lifetime = 0.3
+one_shot = true
 
 [connection signal="timeout" from="shooting_timer" to="." method="_on_shooting_timer_timeout"]
 [connection signal="timeout" from="grenade_timer" to="." method="_on_grenade_timer_timeout"]
