@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://280fx3gg8wdt"]
+[gd_scene load_steps=4 format=3 uid="uid://280fx3gg8wdt"]
 
 [ext_resource type="Texture2D" uid="uid://dh67k48k2eqv6" path="res://assets/Gfx/objects/light.png" id="1_lk0d4"]
+[ext_resource type="Texture2D" uid="uid://cmr37wl81l5oa" path="res://assets/Gfx/lights/textures/circle.png" id="2_g5mwd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fixim"]
 radius = 17.0
@@ -14,3 +15,6 @@ shape = SubResource("CapsuleShape2D_fixim")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_lk0d4")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("2_g5mwd")
