@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://b1uvde725m8h3" path="res://assets/Gfx/objects/wall_lamp.png" id="1_pasij"]
 [ext_resource type="Texture2D" uid="uid://cmr37wl81l5oa" path="res://assets/Gfx/lights/textures/circle.png" id="2_h3064"]
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ldxqh"]
-polygon = PackedVector2Array(-182, -29, -203, -30, -203, 11, -363, 11, -389, -53, -351, -100, -320, -127, -262, -149, 307, -151, 362, -137, 401, -111, 449, -53, 422, 7, 257, 9, 257, -28, 241, -29, 241, -71, -183, -71)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8hnxm"]
+polygon = PackedVector2Array(-194, -68, -197, -67, -197, -34, -194, -29, -194, -26, -195, -20, -191, -17, -183, -21, -182, -78, -188, -80, -192, -75)
 
 [node name="wall_lamp" type="StaticBody2D"]
 
@@ -23,4 +23,9 @@ texture = ExtResource("2_h3064")
 texture_scale = 3.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_ldxqh")
+occluder = SubResource("OccluderPolygon2D_8hnxm")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(58, -99)
+rotation = 3.14159
+occluder = SubResource("OccluderPolygon2D_8hnxm")
