@@ -8,7 +8,7 @@ radius = 88.0
 
 [sub_resource type="Gradient" id="Gradient_w2ll7"]
 offsets = PackedFloat32Array(0.139785, 1)
-colors = PackedColorArray(0.239216, 0.239216, 0.239216, 0.576471, 0.576471, 0.576471, 0.576471, 0.572549)
+colors = PackedColorArray(1, 1, 1, 0, 0.576471, 0.576471, 0.576471, 0.278431)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_oi55b"]
 gradient = SubResource("Gradient_w2ll7")
@@ -19,7 +19,8 @@ emission_shape_scale = Vector3(3, 3, 3)
 emission_shape = 1
 emission_sphere_radius = 30.0
 gravity = Vector3(60, -60, 0)
-scale_max = 2.5
+scale_min = 1.5
+scale_max = 4.0
 color_ramp = SubResource("GradientTexture1D_oi55b")
 turbulence_enabled = true
 
