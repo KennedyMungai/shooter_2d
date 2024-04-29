@@ -23,6 +23,8 @@ texture = ExtResource("1_lk0d4")
 color = Color(0.19921, 0.428185, 1, 1)
 energy = 5.0
 shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 3.0
 texture = ExtResource("2_g5mwd")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
