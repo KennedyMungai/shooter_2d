@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://280fx3gg8wdt"]
+[gd_scene load_steps=5 format=3 uid="uid://280fx3gg8wdt"]
 
 [ext_resource type="Texture2D" uid="uid://dh67k48k2eqv6" path="res://assets/Gfx/objects/light.png" id="1_lk0d4"]
 [ext_resource type="Texture2D" uid="uid://cmr37wl81l5oa" path="res://assets/Gfx/lights/textures/circle.png" id="2_g5mwd"]
@@ -6,6 +6,9 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fixim"]
 radius = 17.0
 height = 198.0
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8blk1"]
+polygon = PackedVector2Array(-77, 15, -89, 14, -98, 7, -99, -1, -98, -7, -92, -15, -82, -18, 80, -18, 90, -15, 96, -9, 99, -2, 99, 4, 94, 12, 86, 16, 75, 16, 74, -4, -75, -4)
 
 [node name="simple_light" type="StaticBody2D"]
 
@@ -17,8 +20,9 @@ shape = SubResource("CapsuleShape2D_fixim")
 texture = ExtResource("1_lk0d4")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-color = Color(0, 0, 1, 1)
+color = Color(0.19921, 0.428185, 1, 1)
 energy = 5.0
 texture = ExtResource("2_g5mwd")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_8blk1")
