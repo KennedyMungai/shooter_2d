@@ -25101,6 +25101,9 @@ texture_region_size = Vector2i(390, 390)
 6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:1/0/physics_layer_0/angular_velocity = 0.0
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-71.433, 170.646, 71.8376, 170.614, 72.2267, 195, -71.433, 195)
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_ybou5"]
 tile_size = Vector2i(390, 390)
