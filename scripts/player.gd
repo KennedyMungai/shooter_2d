@@ -26,6 +26,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		var selected_laser = laser_markers[randi() % laser_markers.size() - 1]
 		can_laser = false
 		laser_fired.emit(selected_laser.global_position, player_direction)
+		$flash_emitter.emitting = true
 	elif(event.is_action_pressed('secondary action')) and can_grenade:
 		can_grenade = false
 		grenade_thrown.emit($grenade_starter_position/grenade_starter_marker.global_position, player_direction)
