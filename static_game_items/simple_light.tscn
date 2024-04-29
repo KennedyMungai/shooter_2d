@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://280fx3gg8wdt"]
+
+[ext_resource type="Texture2D" uid="uid://dh67k48k2eqv6" path="res://assets/Gfx/objects/light.png" id="1_lk0d4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fixim"]
+radius = 17.0
+height = 198.0
+
+[node name="simple_light" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lk0d4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_fixim")
