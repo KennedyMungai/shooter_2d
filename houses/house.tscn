@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dw8enivas3s6p"]
+[gd_scene load_steps=6 format=3 uid="uid://dw8enivas3s6p"]
 
 [ext_resource type="Texture2D" uid="uid://bli5i0vmaat1d" path="res://assets/Gfx/tilesets/interior.png" id="1_xvylc"]
 [ext_resource type="PackedScene" uid="uid://280fx3gg8wdt" path="res://static_game_items/simple_light.tscn" id="2_lkdja"]
+[ext_resource type="PackedScene" uid="uid://dp27haryjjkwh" path="res://static_game_items/wall_lamp.tscn" id="3_w0ecy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82ck2"]
 resource_name = "interior"
@@ -25133,3 +25134,6 @@ position = Vector2(-2252, -1271)
 
 [node name="simple_light2" parent="." instance=ExtResource("2_lkdja")]
 position = Vector2(-152, -1264)
+
+[node name="wall_lamp" parent="." instance=ExtResource("3_w0ecy")]
+position = Vector2(1728, -1152)
