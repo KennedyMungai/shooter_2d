@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://280fx3gg8wdt"]
+[gd_scene load_steps=4 format=3 uid="uid://280fx3gg8wdt"]
 
 [ext_resource type="Texture2D" uid="uid://dh67k48k2eqv6" path="res://assets/Gfx/objects/light.png" id="1_lk0d4"]
 [ext_resource type="Texture2D" uid="uid://cmr37wl81l5oa" path="res://assets/Gfx/lights/textures/circle.png" id="2_g5mwd"]
@@ -6,9 +6,6 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fixim"]
 radius = 17.0
 height = 198.0
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_r0ndq"]
-polygon = PackedVector2Array(-78, 15, -88, 14, -98, 7, -99, -3, -92, -13, -85, -16, -77, -18, 78, -18, 91, -15, 97, -9, 100, 1, 97, 10, 90, 13, 81, 15, 76, 15, 74, -4, -73, -4, -76, -1)
 
 [node name="simple_light" type="StaticBody2D"]
 
@@ -25,4 +22,3 @@ energy = 5.0
 texture = ExtResource("2_g5mwd")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_r0ndq")
