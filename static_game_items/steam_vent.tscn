@@ -1,10 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn4drpt8jym51"]
+[gd_scene load_steps=7 format=3 uid="uid://dn4drpt8jym51"]
 
 [ext_resource type="Texture2D" uid="uid://b6nts5megy4hi" path="res://assets/Gfx/objects/ventilation_hole.png" id="1_fyi1k"]
 [ext_resource type="Texture2D" uid="uid://ciy72cb5frwap" path="res://assets/Gfx/decals/white.png" id="2_0qu58"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7nssm"]
 radius = 88.0
+
+[sub_resource type="Gradient" id="Gradient_w2ll7"]
+offsets = PackedFloat32Array(0.139785, 1)
+colors = PackedColorArray(0.241156, 0.241156, 0.241156, 1, 0.577008, 0.577008, 0.577008, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_oi55b"]
+gradient = SubResource("Gradient_w2ll7")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_177uu"]
 particle_flag_disable_z = true
@@ -14,6 +21,7 @@ emission_sphere_radius = 30.0
 gravity = Vector3(60, -60, 0)
 scale_min = 0.3
 scale_max = 0.8
+color_ramp = SubResource("GradientTexture1D_oi55b")
 turbulence_enabled = true
 
 [node name="steam_vent" type="StaticBody2D"]
