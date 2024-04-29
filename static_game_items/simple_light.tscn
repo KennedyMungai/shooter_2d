@@ -17,4 +17,6 @@ shape = SubResource("CapsuleShape2D_fixim")
 texture = ExtResource("1_lk0d4")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0, 0, 1, 1)
+energy = 5.0
 texture = ExtResource("2_g5mwd")
