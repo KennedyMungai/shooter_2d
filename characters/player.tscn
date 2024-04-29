@@ -16,16 +16,7 @@ gradient = SubResource("Gradient_vjsn3")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_so63c"]
 particle_flag_disable_z = true
-emission_shape = 6
-emission_ring_axis = Vector3(0, 0, 1)
-emission_ring_height = 1.0
-emission_ring_radius = 1.0
-emission_ring_inner_radius = 0.0
-angle_min = -90.0
-angle_max = 90.0
-gravity = Vector3(200, 0, 0)
-scale_min = 0.1
-scale_max = 0.35
+scale_max = 3.0
 color_ramp = SubResource("GradientTexture1D_8bval")
 
 [node name="player" type="CharacterBody2D"]
@@ -68,12 +59,12 @@ position = Vector2(106, 17)
 rotation = 1.5708
 
 [node name="flash_emitter" type="GPUParticles2D" parent="."]
-position = Vector2(97, 17)
+position = Vector2(101, 17)
 emitting = false
 amount = 10
 process_material = SubResource("ParticleProcessMaterial_so63c")
 texture = ExtResource("3_7crau")
-lifetime = 0.3
+lifetime = 0.1
 one_shot = true
 
 [connection signal="timeout" from="shooting_timer" to="." method="_on_shooting_timer_timeout"]
