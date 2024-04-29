@@ -20,4 +20,4 @@ texture = ExtResource("1_lk0d4")
 color = Color(0, 0, 1, 1)
 energy = 5.0
 texture = ExtResource("2_g5mwd")
-texture_scale = 10.0
+texture_scale = 2.0
