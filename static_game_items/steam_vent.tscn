@@ -11,6 +11,8 @@ emission_shape_scale = Vector3(3, 3, 3)
 emission_shape = 1
 emission_sphere_radius = 30.0
 gravity = Vector3(60, -60, 0)
+scale_min = 0.5
+scale_max = 1.5
 turbulence_enabled = true
 
 [node name="steam_vent" type="StaticBody2D"]
@@ -22,5 +24,5 @@ shape = SubResource("CircleShape2D_7nssm")
 texture = ExtResource("1_fyi1k")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-amount = 150
+amount = 60
 process_material = SubResource("ParticleProcessMaterial_177uu")
