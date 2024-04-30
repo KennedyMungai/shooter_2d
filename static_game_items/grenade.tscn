@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://djxfvprb53ckl"]
+[gd_scene load_steps=11 format=3 uid="uid://djxfvprb53ckl"]
 
 [ext_resource type="Texture2D" uid="uid://ra1763ojd38q" path="res://assets/Gfx/projectiles/grenade.png" id="1_67xk4"]
 [ext_resource type="Script" path="res://scripts/grenade.gd" id="1_lgvdu"]
@@ -26,6 +26,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [27]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PointLight2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [10.0]
+}
 
 [sub_resource type="Animation" id="Animation_7kpnt"]
 resource_name = "explosion"
@@ -44,9 +56,27 @@ tracks/0/keys = {
 "values": [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62]
 }
 
+[sub_resource type="Animation" id="Animation_ioilp"]
+resource_name = "blinking"
+length = 2.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [20.0, 1.0, 20.0, 1.0, 20.0, 1.0, 20.0, 1.0, 20.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwqyg"]
 _data = {
 "RESET": SubResource("Animation_p4hy1"),
+"blinking": SubResource("Animation_ioilp"),
 "explosion": SubResource("Animation_7kpnt")
 }
 
@@ -65,6 +95,7 @@ shape = SubResource("CircleShape2D_mrv4v")
 texture = ExtResource("1_67xk4")
 
 [node name="explosion" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("3_17rnh")
@@ -76,16 +107,15 @@ frame = 27
 libraries = {
 "": SubResource("AnimationLibrary_qwqyg")
 }
-autoplay = "explosion"
 
 [node name="explosion_timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-enabled = false
-color = Color(1, 0.0580914, 0.197857, 1)
-energy = 2.0
+color = Color(1, 0, 0, 1)
+energy = 10.0
 texture = ExtResource("4_oji5j")
+texture_scale = 0.25
 
 [connection signal="animation_finished" from="explosion_animation_player" to="." method="_on_explosion_animation_animation_finished"]
