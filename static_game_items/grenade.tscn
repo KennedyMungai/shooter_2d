@@ -76,3 +76,4 @@ frame = 27
 libraries = {
 "": SubResource("AnimationLibrary_qwqyg")
 }
+autoplay = "explosion"
