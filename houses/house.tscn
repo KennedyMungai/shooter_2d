@@ -1,5 +1,6 @@
-[gd_scene load_steps=42 format=3 uid="uid://dw8enivas3s6p"]
+[gd_scene load_steps=43 format=3 uid="uid://dw8enivas3s6p"]
 
+[ext_resource type="Script" path="res://scripts/house.gd" id="1_r3toj"]
 [ext_resource type="Texture2D" uid="uid://bli5i0vmaat1d" path="res://assets/Gfx/tilesets/interior.png" id="1_xvylc"]
 [ext_resource type="PackedScene" uid="uid://280fx3gg8wdt" path="res://static_game_items/simple_light.tscn" id="2_lkdja"]
 [ext_resource type="PackedScene" uid="uid://dp27haryjjkwh" path="res://static_game_items/wall_lamp.tscn" id="3_w0ecy"]
@@ -25256,6 +25257,7 @@ sources/0 = SubResource("TileSetAtlasSource_82ck2")
 
 [node name="house" type="Area2D"]
 collision_layer = 16
+script = ExtResource("1_r3toj")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-2605, -1233, -2611, 1205, -2526, 1381, -2385, 1432, 2440, 1426, 2550, 1356, 2593, 1273, 2610, -1275, 2531, -1366, 2390, -1436, -2390, -1431, -2538, -1357)
@@ -25307,3 +25309,6 @@ rotation = -1.5708
 [node name="wall_lamp4" parent="lights" instance=ExtResource("3_w0ecy")]
 position = Vector2(-2312, 552)
 rotation = -1.5708
+
+[connection signal="body_entered" from="." to="." method="_on_house_entered"]
+[connection signal="body_exited" from="." to="." method="_on_house_exited"]
