@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://da4ruvdw6hj3y"]
+[gd_scene load_steps=3 format=3 uid="uid://da4ruvdw6hj3y"]
 
 [ext_resource type="PackedScene" uid="uid://dubkhpbjbtxbo" path="res://characters/player.tscn" id="1_or7x6"]
+[ext_resource type="PackedScene" uid="uid://3kyrdjq1ajja" path="res://static_game_items/bed.tscn" id="2_eyklu"]
 
 [node name="level_2" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_or7x6")]
+
+[node name="bed" parent="." instance=ExtResource("2_eyklu")]
+position = Vector2(194, 321)
