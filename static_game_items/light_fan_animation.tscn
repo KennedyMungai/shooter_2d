@@ -204,4 +204,4 @@ animations = [{
 [node name="light_fan_animation" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_w55gi")
 animation = &"light_fan"
-frame_progress = 0.940579
+frame_progress = 0.879075
