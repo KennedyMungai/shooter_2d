@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3geojo882ny2"]
+[gd_scene load_steps=19 format=3 uid="uid://b3geojo882ny2"]
 
 [ext_resource type="PackedScene" uid="uid://bcp1tsus2piwk" path="res://levels/level.tscn" id="1_d1xns"]
 [ext_resource type="Texture2D" uid="uid://cqr00sqitwr7j" path="res://assets/Gfx/ground/stones.png" id="2_8k5aj"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c7m4hqomv2swv" path="res://assets/Gfx/decals/moss/moss_5.png" id="10_7jcvs"]
 [ext_resource type="PackedScene" uid="uid://dw8enivas3s6p" path="res://houses/house.tscn" id="11_jvfl4"]
 [ext_resource type="PackedScene" uid="uid://b6pow5ajqilxi" path="res://static_game_items/light_fan_animation.tscn" id="12_5ncbw"]
+[ext_resource type="PackedScene" uid="uid://dn4drpt8jym51" path="res://static_game_items/steam_vent.tscn" id="14_sr8j0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38bcw"]
 resource_name = "Walls"
@@ -1879,6 +1880,9 @@ rotation = -2.47275
 
 [node name="light_fan_animation" parent="ground" index="10" instance=ExtResource("12_5ncbw")]
 position = Vector2(-3439, 2302)
+
+[node name="steam_vent" parent="ground" index="11" instance=ExtResource("14_sr8j0")]
+position = Vector2(-20, 927)
 
 [node name="gate" parent="." index="1" instance=ExtResource("2_ye3h2")]
 position = Vector2(142, -852)
