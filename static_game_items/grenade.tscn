@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://djxfvprb53ckl"]
+[gd_scene load_steps=13 format=3 uid="uid://djxfvprb53ckl"]
 
 [ext_resource type="Texture2D" uid="uid://ra1763ojd38q" path="res://assets/Gfx/projectiles/grenade.png" id="1_67xk4"]
 [ext_resource type="Script" path="res://scripts/grenade.gd" id="1_lgvdu"]
 [ext_resource type="Texture2D" uid="uid://c1esu0rybs1r7" path="res://assets/Gfx/explosions/explosion_3.png" id="3_17rnh"]
+[ext_resource type="Texture2D" uid="uid://cmr37wl81l5oa" path="res://assets/Gfx/lights/textures/circle.png" id="4_oji5j"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lbmr5"]
 friction = 10.0
@@ -49,6 +50,43 @@ _data = {
 "explosion": SubResource("Animation_7kpnt")
 }
 
+[sub_resource type="Animation" id="Animation_ot2p5"]
+resource_name = "grenade_blinking"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PointLight2D:enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_f12mm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PointLight2D:enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ukpa"]
+_data = {
+"RESET": SubResource("Animation_f12mm"),
+"grenade_blinking": SubResource("Animation_ot2p5")
+}
+
 [node name="grenade" type="RigidBody2D"]
 collision_layer = 8
 collision_mask = 14
@@ -57,11 +95,11 @@ gravity_scale = 0.0
 linear_damp = 1.6
 script = ExtResource("1_lgvdu")
 
-[node name="Grenade" type="Sprite2D" parent="."]
-texture = ExtResource("1_67xk4")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mrv4v")
+
+[node name="Grenade" type="Sprite2D" parent="."]
+texture = ExtResource("1_67xk4")
 
 [node name="explosion" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
@@ -70,10 +108,25 @@ hframes = 8
 vframes = 8
 frame = 27
 
-[node name="explosion_animation" type="AnimationPlayer" parent="."]
+[node name="explosion_animation_player" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_qwqyg")
 }
-autoplay = "explosion"
 
-[connection signal="animation_finished" from="explosion_animation" to="." method="_on_explosion_animation_animation_finished"]
+[node name="explosion_timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+enabled = false
+color = Color(1, 0.0580914, 0.197857, 1)
+energy = 2.0
+texture = ExtResource("4_oji5j")
+
+[node name="grenade_blinking_animation_player" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6ukpa")
+}
+autoplay = "grenade_blinking"
+
+[connection signal="animation_finished" from="explosion_animation_player" to="." method="_on_explosion_animation_animation_finished"]
