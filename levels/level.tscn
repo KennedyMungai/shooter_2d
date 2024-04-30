@@ -1899,6 +1899,7 @@ rotation_smoothing_enabled = true
 rotation_smoothing_speed = 10.0
 
 [node name="projectiles" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="steam_vent" parent="." instance=ExtResource("14_v55ob")]
 position = Vector2(695, 2205)
