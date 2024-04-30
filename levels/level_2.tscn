@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://b3geojo882ny2"]
+[gd_scene load_steps=18 format=3 uid="uid://b3geojo882ny2"]
 
 [ext_resource type="PackedScene" uid="uid://bcp1tsus2piwk" path="res://levels/level.tscn" id="1_d1xns"]
 [ext_resource type="Texture2D" uid="uid://cqr00sqitwr7j" path="res://assets/Gfx/ground/stones.png" id="2_8k5aj"]
+[ext_resource type="Script" path="res://scripts/level_2.gd" id="2_eotq0"]
 [ext_resource type="PackedScene" uid="uid://bqelt3qrgeae2" path="res://static_game_items/gate.tscn" id="2_ye3h2"]
 [ext_resource type="Texture2D" uid="uid://c1vrbab7hgtqv" path="res://assets/Gfx/tilesets/outside_walls.png" id="3_jhjku"]
 [ext_resource type="Texture2D" uid="uid://kjuis4b58o0a" path="res://assets/Gfx/tilesets/soil.png" id="4_xuti8"]
@@ -1827,6 +1828,7 @@ sources/0 = SubResource("TileSetAtlasSource_38bcw")
 sources/1 = SubResource("TileSetAtlasSource_pqmq2")
 
 [node name="level_2" instance=ExtResource("1_d1xns")]
+script = ExtResource("2_eotq0")
 
 [node name="soil" type="Sprite2D" parent="ground" index="0"]
 texture_repeat = 2
