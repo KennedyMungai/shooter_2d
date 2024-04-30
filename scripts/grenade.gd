@@ -7,4 +7,5 @@ func _ready() -> void:
 
 
 func _on_explosion_animation_animation_finished(anim_name: StringName) -> void:
-	queue_free()
+	if(anim_name == "explosion"):
+		queue_free()
