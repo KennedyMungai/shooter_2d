@@ -1,6 +1,6 @@
-extends Node2D
-
 class_name LevelParent
+
+extends Node2D
 
 
 var laser_scene: PackedScene = preload("res://static_game_items/laser.tscn")
