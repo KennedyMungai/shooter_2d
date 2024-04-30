@@ -7,7 +7,6 @@ var grenade_scene: PackedScene = preload('res://static_game_items/grenade.tscn')
 
 func _on_gate_player_entered_gate(body) -> void:
 	print('Player has entered gate external')
-	print(body)
 
 
 func _on_player_laser_fired(emitter_position, direction_fired) -> void:
