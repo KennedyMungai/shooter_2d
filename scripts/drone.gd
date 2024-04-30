@@ -8,4 +8,4 @@ func _physics_process(_delta: float) -> void:
 
 
 func hit() -> void:
-	print('Damage')
+	queue_free()

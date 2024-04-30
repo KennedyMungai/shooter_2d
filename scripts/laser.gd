@@ -15,4 +15,5 @@ func _on_laser_lifespan_timeout() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	pass
+	if "hit" in body:
+		queue_free()
