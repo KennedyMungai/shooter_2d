@@ -1,9 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://bcp1tsus2piwk"]
+[gd_scene load_steps=18 format=3 uid="uid://bcp1tsus2piwk"]
 
 [ext_resource type="PackedScene" uid="uid://dubkhpbjbtxbo" path="res://characters/player.tscn" id="1_dynca"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_jjaet"]
 [ext_resource type="Texture2D" uid="uid://cqr00sqitwr7j" path="res://assets/Gfx/ground/stones.png" id="2_e3iq8"]
-[ext_resource type="PackedScene" uid="uid://bqelt3qrgeae2" path="res://static_game_items/gate.tscn" id="3_2p7bg"]
 [ext_resource type="Texture2D" uid="uid://b4llo0grbcsw1" path="res://assets/Gfx/decals/dirt_patch.png" id="3_jeau5"]
 [ext_resource type="Texture2D" uid="uid://b3hgou65qr1b8" path="res://assets/Gfx/decals/moss/moss_1.png" id="4_q5epc"]
 [ext_resource type="Texture2D" uid="uid://djuc6unk1i3pd" path="res://assets/Gfx/decals/moss/moss_2.png" id="5_62ce7"]
@@ -1883,9 +1882,6 @@ rotation = -2.47275
 [node name="light_fan_animation" parent="ground" instance=ExtResource("12_cpv68")]
 position = Vector2(-3439, 2302)
 
-[node name="gate" parent="." instance=ExtResource("3_2p7bg")]
-position = Vector2(0, -888)
-
 [node name="player" parent="." instance=ExtResource("1_dynca")]
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -1905,6 +1901,5 @@ position = Vector2(695, 2205)
 
 [connection signal="player_entered" from="ground/house" to="." method="_on_house_player_entered"]
 [connection signal="player_exited" from="ground/house" to="." method="_on_house_player_exited"]
-[connection signal="player_entered_gate" from="gate" to="." method="_on_gate_player_entered_gate"]
 [connection signal="grenade_thrown" from="player" to="." method="_on_player_grenade_thrown"]
 [connection signal="laser_fired" from="player" to="." method="_on_player_laser_fired"]
