@@ -1881,7 +1881,7 @@ position = Vector2(-2778, 2356)
 rotation = -2.47275
 
 [node name="light_fan_animation" parent="ground" instance=ExtResource("12_cpv68")]
-position = Vector2(1936, 1755)
+position = Vector2(-3597, 2616)
 
 [node name="gate" parent="." instance=ExtResource("3_2p7bg")]
 position = Vector2(0, -888)
