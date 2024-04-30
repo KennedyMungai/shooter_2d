@@ -70,7 +70,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [20.0, 1.0, 20.0, 1.0, 20.0, 1.0, 20.0, 1.0, 20.0]
+"values": [20.0, 0.1, 20.0, 0.1, 20.0, 0.1, 20.0, 0.1, 20.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwqyg"]
@@ -107,6 +107,7 @@ frame = 27
 libraries = {
 "": SubResource("AnimationLibrary_qwqyg")
 }
+autoplay = "blinking"
 
 [node name="explosion_timer" type="Timer" parent="."]
 wait_time = 2.0

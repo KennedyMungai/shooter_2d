@@ -9,5 +9,8 @@ func _ready() -> void:
 
 
 func _on_explosion_animation_animation_finished(anim_name: StringName) -> void:
+	if(anim_name == "blinking"):
+		$explosion_animation_player.play('explosion')
+		$explosion.visible = true
 	if(anim_name == "explosion"):
 		queue_free()
