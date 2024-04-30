@@ -76,5 +76,6 @@ frame = 27
 libraries = {
 "": SubResource("AnimationLibrary_qwqyg")
 }
+autoplay = "explosion"
 
 [connection signal="animation_finished" from="explosion_animation" to="." method="_on_explosion_animation_animation_finished"]
