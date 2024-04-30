@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3geojo882ny2"]
+[gd_scene load_steps=3 format=3 uid="uid://b3geojo882ny2"]
 
 [ext_resource type="PackedScene" uid="uid://bcp1tsus2piwk" path="res://levels/level.tscn" id="1_d1xns"]
+[ext_resource type="PackedScene" uid="uid://bqelt3qrgeae2" path="res://static_game_items/gate.tscn" id="2_ye3h2"]
 
 [node name="level_2" instance=ExtResource("1_d1xns")]
+
+[node name="gate" parent="." index="1" instance=ExtResource("2_ye3h2")]
+position = Vector2(142, -852)
