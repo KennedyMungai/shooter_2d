@@ -25270,38 +25270,40 @@ layer_1/tile_data = PackedInt32Array(-196602, 327680, 1, -131066, 327680, 1, -65
 layer_2/name = "interior_walls"
 layer_2/tile_data = PackedInt32Array(131075, 65536, 6, 65539, 65536, 6, 3, 196608, 6, 4, 0, 6, 5, 0, 6, 6, 393216, 7, 196611, 327680, 8, 2, 0, 6, 1, 0, 6, 0, 0, 6, 65535, 0, 6, 65534, 0, 6, 65533, 196608, 6, 131069, 65536, 6, 196605, 65536, 6, 262141, 327680, 8, 65532, 0, 6, 65531, 0, 6, 65530, 0, 6, 65529, 262144, 7, -3, 65536, 6, -65539, 65536, 6, -131075, 131072, 7, -131076, 0, 6, -131077, 0, 6, -131078, 0, 6, -131079, 262144, 7, -131074, 196608, 8, -196610, 327680, 6, -131073, 0, 6, -196608, 0, 6, -196607, 65536, 8, -262143, 327680, 6, -65533, 65536, 6, -131069, 0, 7, -131068, 0, 6, -131067, 0, 6, -131066, 393216, 7)
 
-[node name="simple_light" parent="." instance=ExtResource("2_lkdja")]
+[node name="lights" type="Node2D" parent="."]
+
+[node name="simple_light" parent="lights" instance=ExtResource("2_lkdja")]
 position = Vector2(-2252, -1271)
 
-[node name="simple_light3" parent="." instance=ExtResource("2_lkdja")]
+[node name="simple_light3" parent="lights" instance=ExtResource("2_lkdja")]
 position = Vector2(-1800, 1296)
 rotation = 3.14159
 
-[node name="simple_light4" parent="." instance=ExtResource("2_lkdja")]
+[node name="simple_light4" parent="lights" instance=ExtResource("2_lkdja")]
 position = Vector2(1288, 1264)
 rotation = 3.14159
 
-[node name="simple_light5" parent="." instance=ExtResource("2_lkdja")]
+[node name="simple_light5" parent="lights" instance=ExtResource("2_lkdja")]
 position = Vector2(2120, 536)
 rotation = 1.5708
 
-[node name="simple_light2" parent="." instance=ExtResource("2_lkdja")]
+[node name="simple_light2" parent="lights" instance=ExtResource("2_lkdja")]
 position = Vector2(-152, -1264)
 
-[node name="wall_lamp" parent="." instance=ExtResource("3_w0ecy")]
+[node name="wall_lamp" parent="lights" instance=ExtResource("3_w0ecy")]
 position = Vector2(1728, -1152)
 
-[node name="wall_lamp5" parent="." instance=ExtResource("3_w0ecy")]
+[node name="wall_lamp5" parent="lights" instance=ExtResource("3_w0ecy")]
 position = Vector2(-1208, -1168)
 
-[node name="wall_lamp2" parent="." instance=ExtResource("3_w0ecy")]
+[node name="wall_lamp2" parent="lights" instance=ExtResource("3_w0ecy")]
 position = Vector2(-104, 1144)
 rotation = 3.14159
 
-[node name="wall_lamp3" parent="." instance=ExtResource("3_w0ecy")]
+[node name="wall_lamp3" parent="lights" instance=ExtResource("3_w0ecy")]
 position = Vector2(-2272, -288)
 rotation = -1.5708
 
-[node name="wall_lamp4" parent="." instance=ExtResource("3_w0ecy")]
+[node name="wall_lamp4" parent="lights" instance=ExtResource("3_w0ecy")]
 position = Vector2(-2312, 552)
 rotation = -1.5708
