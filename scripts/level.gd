@@ -28,8 +28,10 @@ func _on_player_grenade_thrown(emitter_position, direction_thrown) -> void:
 func _on_house_player_entered() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property($player/Camera2D, 'zoom', Vector2(1,1), 0.6)
+	tween.tween_property($player, "modulate:a", 0.3, 0.6)
 
 
 func _on_house_player_exited() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property($player/Camera2D, 'zoom', Vector2(0.6, 0.6), 0.6)
+	tween.tween_property($player, "modulate:a", 1, 0.6)
