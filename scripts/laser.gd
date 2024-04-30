@@ -12,3 +12,7 @@ func _process(delta: float) -> void:
 
 func _on_laser_lifespan_timeout() -> void:
 	queue_free()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass
