@@ -202,7 +202,8 @@ animations = [{
 }]
 
 [node name="light_fan_animation" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_w55gi")
 animation = &"light_fan"
 autoplay = "light_fan"
-frame_progress = 0.29278
+frame_progress = 0.00863069
