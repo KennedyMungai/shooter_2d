@@ -35,6 +35,7 @@ position = Vector2(2180, -1440)
 metadata/_edit_group_ = true
 
 [node name="lights" type="Node2D" parent="." index="3"]
+metadata/_edit_lock_ = true
 
 [node name="light_fan_animation" parent="lights" index="0" instance=ExtResource("4_p8gjw")]
 position = Vector2(-2110, -1326)
