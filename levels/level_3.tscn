@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cne3of2iciubv"]
+[gd_scene load_steps=8 format=3 uid="uid://cne3of2iciubv"]
 
 [ext_resource type="PackedScene" uid="uid://bcp1tsus2piwk" path="res://levels/level.tscn" id="1_w8bc2"]
 [ext_resource type="TileSet" uid="uid://wkdbt5lgvwpc" path="res://resources/house_tiles.tres" id="2_gl3mm"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b6pow5ajqilxi" path="res://static_game_items/light_fan_animation.tscn" id="4_p8gjw"]
 [ext_resource type="PackedScene" uid="uid://dp27haryjjkwh" path="res://static_game_items/wall_lamp.tscn" id="5_tvmh4"]
 [ext_resource type="PackedScene" uid="uid://280fx3gg8wdt" path="res://static_game_items/simple_light.tscn" id="6_8tlxf"]
+[ext_resource type="Texture2D" uid="uid://3i8g1thkypsy" path="res://assets/Gfx/lights/overlays/infrastructure.png" id="7_3rui8"]
 
 [node name="level_3" instance=ExtResource("1_w8bc2")]
 
@@ -106,3 +107,10 @@ rotation = 1.5708
 [node name="simple_light9" parent="lights" index="19" instance=ExtResource("6_8tlxf")]
 position = Vector2(3065, -1155)
 rotation = 1.5708
+
+[node name="Infrastructure" type="Sprite2D" parent="lights" index="20"]
+self_modulate = Color(1, 1, 1, 0.352941)
+show_behind_parent = true
+position = Vector2(-2685, -5)
+scale = Vector2(1, 7.48)
+texture = ExtResource("7_3rui8")
