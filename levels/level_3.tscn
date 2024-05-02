@@ -111,6 +111,6 @@ rotation = 1.5708
 [node name="Infrastructure" type="Sprite2D" parent="lights" index="20"]
 self_modulate = Color(1, 1, 1, 0.196078)
 show_behind_parent = true
-position = Vector2(-2685, -5)
-scale = Vector2(1, 7.48)
+position = Vector2(-2439, 6)
+scale = Vector2(2.68, 7.48)
 texture = ExtResource("7_3rui8")
