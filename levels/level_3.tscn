@@ -115,3 +115,7 @@ show_behind_parent = true
 position = Vector2(-2439, 6)
 scale = Vector2(2.68, 7.48)
 texture = ExtResource("7_3rui8")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="4"]
+color = Color(1, 1, 1, 0.588235)
+blend_mode = 1
