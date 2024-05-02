@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cne3of2iciubv"]
+[gd_scene load_steps=9 format=3 uid="uid://cne3of2iciubv"]
 
 [ext_resource type="PackedScene" uid="uid://bcp1tsus2piwk" path="res://levels/level.tscn" id="1_w8bc2"]
 [ext_resource type="TileSet" uid="uid://wkdbt5lgvwpc" path="res://resources/house_tiles.tres" id="2_gl3mm"]
 [ext_resource type="Texture2D" uid="uid://b38uqa0crq0q5" path="res://assets/Gfx/ground/dirt.png" id="2_mnfwu"]
 [ext_resource type="PackedScene" uid="uid://b6pow5ajqilxi" path="res://static_game_items/light_fan_animation.tscn" id="4_p8gjw"]
+[ext_resource type="Texture2D" uid="uid://cmr37wl81l5oa" path="res://assets/Gfx/lights/textures/circle.png" id="4_qpuqc"]
 [ext_resource type="PackedScene" uid="uid://dp27haryjjkwh" path="res://static_game_items/wall_lamp.tscn" id="5_tvmh4"]
 [ext_resource type="PackedScene" uid="uid://280fx3gg8wdt" path="res://static_game_items/simple_light.tscn" id="6_8tlxf"]
 [ext_resource type="Texture2D" uid="uid://3i8g1thkypsy" path="res://assets/Gfx/lights/overlays/infrastructure.png" id="7_3rui8"]
@@ -33,6 +34,9 @@ layer_2/tile_data = PackedInt32Array()
 [node name="player" parent="." index="2"]
 position = Vector2(2180, -1440)
 metadata/_edit_group_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="player" index="9"]
+texture = ExtResource("4_qpuqc")
 
 [node name="lights" type="Node2D" parent="." index="3"]
 metadata/_edit_lock_ = true
@@ -117,5 +121,5 @@ scale = Vector2(2.68, 7.48)
 texture = ExtResource("7_3rui8")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="4"]
-color = Color(0.993074, 0.567969, 0.43862, 1)
+color = Color(0.996867, 0.739822, 0.661132, 1)
 blend_mode = 1
