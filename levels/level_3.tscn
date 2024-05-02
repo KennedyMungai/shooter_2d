@@ -7,7 +7,11 @@
 [node name="level_3" instance=ExtResource("1_w8bc2")]
 
 [node name="Sprite2D" type="Sprite2D" parent="ground" index="0"]
+texture_repeat = 2
+position = Vector2(40, 0)
 texture = ExtResource("2_mnfwu")
+region_enabled = true
+region_rect = Rect2(-7000, -3000, 10000, 5000)
 
 [node name="TileMap" type="TileMap" parent="ground" index="1"]
 tile_set = ExtResource("2_gl3mm")
