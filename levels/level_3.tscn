@@ -123,3 +123,4 @@ texture = ExtResource("7_3rui8")
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="4"]
 color = Color(0.997732, 0.819403, 0.764765, 1)
 blend_mode = 1
+metadata/_edit_lock_ = true
