@@ -121,5 +121,5 @@ scale = Vector2(2.68, 7.48)
 texture = ExtResource("7_3rui8")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="4"]
-color = Color(0.996867, 0.739822, 0.661132, 1)
+color = Color(0.997732, 0.819403, 0.764765, 1)
 blend_mode = 1
