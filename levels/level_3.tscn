@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cne3of2iciubv"]
+[gd_scene load_steps=11 format=3 uid="uid://cne3of2iciubv"]
 
 [ext_resource type="PackedScene" uid="uid://bcp1tsus2piwk" path="res://levels/level.tscn" id="1_w8bc2"]
+[ext_resource type="Script" path="res://scripts/level_3.gd" id="2_3tkyo"]
 [ext_resource type="TileSet" uid="uid://wkdbt5lgvwpc" path="res://resources/house_tiles.tres" id="2_gl3mm"]
 [ext_resource type="Texture2D" uid="uid://b38uqa0crq0q5" path="res://assets/Gfx/ground/dirt.png" id="2_mnfwu"]
 [ext_resource type="PackedScene" uid="uid://b6pow5ajqilxi" path="res://static_game_items/light_fan_animation.tscn" id="4_p8gjw"]
@@ -13,6 +14,7 @@
 size = Vector2(124, 286)
 
 [node name="level_3" instance=ExtResource("1_w8bc2")]
+script = ExtResource("2_3tkyo")
 
 [node name="ground" parent="." index="0"]
 metadata/_edit_lock_ = true
@@ -133,3 +135,5 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="doorway" index="0"]
 position = Vector2(3316, -1569)
 shape = SubResource("RectangleShape2D_584mi")
+
+[connection signal="body_entered" from="doorway" to="." method="_on_doorway_body_entered"]
