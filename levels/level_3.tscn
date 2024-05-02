@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cne3of2iciubv"]
+[gd_scene load_steps=4 format=3 uid="uid://cne3of2iciubv"]
 
 [ext_resource type="PackedScene" uid="uid://bcp1tsus2piwk" path="res://levels/level.tscn" id="1_w8bc2"]
 [ext_resource type="TileSet" uid="uid://wkdbt5lgvwpc" path="res://resources/house_tiles.tres" id="2_gl3mm"]
+[ext_resource type="Texture2D" uid="uid://b38uqa0crq0q5" path="res://assets/Gfx/ground/dirt.png" id="2_mnfwu"]
 
 [node name="level_3" instance=ExtResource("1_w8bc2")]
 
-[node name="TileMap" type="TileMap" parent="ground" index="0"]
+[node name="Sprite2D" type="Sprite2D" parent="ground" index="0"]
+texture = ExtResource("2_mnfwu")
+
+[node name="TileMap" type="TileMap" parent="ground" index="1"]
 tile_set = ExtResource("2_gl3mm")
 format = 2
 layer_0/name = "floor"
