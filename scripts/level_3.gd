@@ -2,4 +2,5 @@ extends LevelParent
 
 
 func _on_doorway_body_entered(body: Node2D) -> void:
-	print(body)
+	var tween = create_tween()
+	tween.tween_property($player, 'player_speed', 0, 0.5)
